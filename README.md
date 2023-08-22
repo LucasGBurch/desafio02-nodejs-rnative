@@ -1,0 +1,1 @@
+# Repositório para os desafios 02 de API node.js e app de React Native. Inicialmente, só o backend de node será feito. Eventualmente, funcionará com a aplicação de React Native, quando essa for desenvolvida.
