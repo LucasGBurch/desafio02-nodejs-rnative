@@ -127,4 +127,4 @@ dist
 .pnp.*
 
 # DB
-backend/tmp/app.db
+backend/db/app.db
