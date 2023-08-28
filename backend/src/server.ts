@@ -1,12 +1,14 @@
 import fastify from 'fastify';
+import { randomUUID } from 'crypto';
 import { knex } from './database';
 
 const app = fastify();
 
 app.get('/meals', async () => {
-  const tables = await knex('sqlite_schema').select('*');
+  const meals = await knex('meals')
+    .select('*');
 
-  return tables;
+  return meals;
 });
 
 app.listen({
