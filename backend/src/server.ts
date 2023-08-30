@@ -1,15 +1,11 @@
 import fastify from 'fastify';
 import { knex } from './database';
 import { env } from './env';
+import { mealsRoutes } from './routes/meals';
 
 const app = fastify();
 
-app.get('/meals', async () => {
-  const meals = await knex('meals')
-    .select('*');
-
-  return meals;
-});
+app.register(mealsRoutes);
 
 app.listen({
   port: env.PORT,
